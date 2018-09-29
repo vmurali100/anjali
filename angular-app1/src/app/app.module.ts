@@ -7,6 +7,8 @@ import { Comp1Component } from './Components/comp1/comp1.component';
 import { Comp2Component } from './Components/comp2/comp2.component';
 import { Comp3Component } from './Components/comp3/comp3.component';
 import { Comp4Component } from './Components/comp4/comp4.component';
+import { Comp5Component } from './Components/comp5/comp5.component';
+import { Comp6Component } from './Components/comp6/comp6.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { Comp4Component } from './Components/comp4/comp4.component';
     Comp1Component,
     Comp2Component,
     Comp3Component,
-    Comp4Component
+    Comp4Component,
+    Comp5Component,
+    Comp6Component
   ],
   imports: [
     BrowserModule
