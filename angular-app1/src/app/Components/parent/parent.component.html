@@ -1,0 +1,20 @@
+<table border="1" *ngIf="person">
+  <tr>
+    <th>First Name</th><td>{{person.fname}}</td>
+  </tr>
+  <tr>
+    <th>Last Name</th><td>{{person.lname}}</td>
+  </tr>
+  <tr>
+    <th>Tel</th><td>{{person.tel}}</td>
+  </tr>
+  <tr>
+    <th>Address</th><td>{{person.address}}</td>
+  </tr>
+  <tr>
+    <th>City</th><td>{{person.city}}</td>
+  </tr>
+</table>
+<hr>
+
+<app-child (sendinfo)="receiveData($event)"></app-child>
