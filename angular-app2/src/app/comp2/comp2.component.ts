@@ -12,9 +12,10 @@ export class Comp2Component implements OnInit {
   constructor(private ds:PersonService) { }
 
   ngOnInit() {
-    this.ds.sendInfo.subscribe(r=>{
-      this.personInfo = r;
-    })
+    // this.ds.sendInfo.subscribe(r=>{
+    //   this.personInfo = r;
+    // })
+    this.ds.getRemoteData()
   }
 
 }

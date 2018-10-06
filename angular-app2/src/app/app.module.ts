@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { Comp1Component } from './comp1/comp1.component';
@@ -13,7 +14,8 @@ import { PersonService } from './person.service';
     Comp2Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [PersonService],
   bootstrap: [AppComponent]

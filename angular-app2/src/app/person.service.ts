@@ -1,39 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 
 export class PersonService {
  sendInfo = new Subject<any>();
-  constructor() { }
+  url: string;
+  constructor(private _http:HttpClient) { }
 
   getandsend(std){
-    console.log(std)
-    this.sendInfo.next(std)
+    
   }
 
   sendData(){
-    return [
-      {
-          "fname": "Kehinde",
-          "lname": "Ingle",
-          "tel": "(324)285-3323",
-          "address": "6556 Id Rd",
-          "city": "Swansea",
-          "state": "HI",
-          "zip": 55931
-      },
-      {
-          "fname": "Russell",
-          "lname": "Crumbliss",
-          "tel": "(532)036-1010",
-          "address": "8200 Placerat St",
-          "city": "Pacific Palisades",
-          "state": "TN",
-          "zip": 25972
-      }
-    
-  ]
+  
+  }
+  
+  getRemoteData(){
+    this.url = "http://www.filltext.com/?rows=5&fname={firstName}&lname={lastName}&tel={phone|format}&address={streetAddress}&city={city}&state={usState|abbr}&zip={zip}&pretty=true"
+    this._http.get(this.url).subscribe(response=>{
+      console.log(response)
+    })
   }
   
 }
