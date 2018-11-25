@@ -8,7 +8,8 @@ import { ExperienceComponent } from './Compoments/experience/experience.componen
 import { EducationComponent } from './Compoments/education/education.component';
 import { SkillsComponent } from './Compoments/skills/skills.component';
 import { InterestsComponent } from './Compoments/interests/interests.component';
-
+import { HttpClientModule} from '@angular/common/http';
+import { UserTableComponent } from './Compoments/user-table/user-table.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +17,13 @@ import { InterestsComponent } from './Compoments/interests/interests.component';
     ExperienceComponent,
     EducationComponent,
     SkillsComponent,
-    InterestsComponent
+    InterestsComponent,
+    UserTableComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
